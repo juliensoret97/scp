@@ -1,0 +1,41 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Choix index{% endblock %}
+
+{% block body %}
+    <h1>Choix index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Numero</th>
+                <th>Email</th>
+                <th>Choix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for choix in choixes %}
+            <tr>
+                <td>{{ choix.nom }}</td>
+                <td>{{ choix.prenom }}</td>
+                <td>{{ choix.numero }}</td>
+                <td>{{ choix.email }}</td>
+                <td>{{ choix.choix }}</td>
+                <td>
+                    <a href="{{ path('choix_show', {'id': choix.id}) }}">show</a>
+                    <a href="{{ path('choix_edit', {'id': choix.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {# <a href="{{ path('choix_new') }}">Create new</a> #}
+{% endblock %}

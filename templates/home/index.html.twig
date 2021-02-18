@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  SCP Formation
+{% endblock %}
+
+{% block body %}
+  <style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font:
+    18px/1.5 sans-serif; } .example-wrapper code { background: #F5F5F5; padding:
+    2px 6px; }
+  </style>
+  {# <div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid" id="section">
+      <div class="container" id="homea">
+        <h2>
+          Bientôt avec SCP Formation
+        </h2>
+        <p>
+          Une session de formation disponible inscrivez vous ci-dessous !
+        </p>
+        <hr class="my-2" />
+        <p class="lead">
+          <a class="btn btn-primary btn-lg"
+            href="Jumbo action link"
+            role="button">
+            S'inscrire
+          </a>
+        </p>
+      </div>
+    </div>
+  </div> #}
+  <div class="container mt-5" id="container">
+    <h1 class="display-4 font-weight-bold" id="h1">
+      Deux sessions de formation, inscrivez-vous avant
+      le 12 mars 2021 ! 
+    </h1>
+    <div class="row">
+      <div class="col-sm-6 py-2">
+        <div class="card h-100 text-white bg-danger">
+          <div class="card-body">
+            <h3 class="card-title">
+              CCP Secrétaire comptable
+            </h3>
+            <h5>
+              Objectif de la formation :
+            </h5>
+            <p class="card-text">
+              - Assister une équipe dans la communication des informations et
+              l'organisation des activités <br />
+              - Traiter les opérations administratives liées à la gestion commerciale
+              et aux ressource s humaines <br />
+              - Assurer les travaux courants de comptabilité <br />
+              - Préparer la paie et les déclarations sociales courantes.
+            </p>
+            <h5>
+              Prérequis :
+            </h5>
+            <p class="card-text">
+              Niveau V (BEP, CAP, VAE)
+            </p>
+            <h5>
+              Niveau à la sortie de la formation :
+            </h5>
+            <p class="card-text">
+              Niveau IV (BP, BT, baccalauréat professionnel)
+            </p>
+            <a href="{{ asset('pdf/ccpsc.pdf') }}" class="btn btn-info">
+              Pour plus d'informations (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 py-2">
+        <div class="card h-100 text-white bg-danger">
+          <div class="card-body">
+            <h3 class="card-title">
+              CCP Assistant Ressources Humaines
+            </h3>
+            <h5>
+              Objectif de la formation :
+            </h5>
+            <p class="card-text">
+              Acquérir les compétences nécessaires pour concourir au titre <br />
+              Professionnel en validant le CCP : <br />
+              - Assurer l’administration du personnel <br />
+              - Mettre en œuvre les processus de recrutement,d’intégration et de
+              formation des salariés.
+            </p>
+            <h5>
+              Prérequis :
+            </h5>
+            <p class="card-text">
+              Niveau IV (Baccalauréat, VAE)
+            </p>
+            <h5>
+              Niveau à la sortie de la formation :
+            </h5>
+            <p class="card-text">
+              Niveau III (BTS, DUT)
+            </p>
+            <a href="{{ asset('pdf/ccparh.pdf') }}" class="btn btn-info">
+              Pour plus d'informations (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="{{ path('choix_new') }}" class="btn btn-danger m-3">Inscription</a>
+    <p>*places limitées</p>
+  </div>
+
+  {# <section id="section">
+    <div class="container">
+      
+        <h3 class="text-center pt-5">
+          Bientôt une session de formation disponible inscrivez vous ci-dessous
+        </h3>
+      
+      <div class="d-flex justify-content-center">
+        <a href="" class="btn btn-success">S'inscrire</a>
+      </div>
+    </div>
+  </section> #}
+{% endblock %}
