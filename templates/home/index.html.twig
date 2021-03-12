@@ -10,26 +10,6 @@
     18px/1.5 sans-serif; } .example-wrapper code { background: #F5F5F5; padding:
     2px 6px; }
   </style>
-  {# <div class="container-fluid">
-    <div class="jumbotron jumbotron-fluid" id="section">
-      <div class="container" id="homea">
-        <h2>
-          Bientôt avec SCP Formation
-        </h2>
-        <p>
-          Une session de formation disponible inscrivez vous ci-dessous !
-        </p>
-        <hr class="my-2" />
-        <p class="lead">
-          <a class="btn btn-primary btn-lg"
-            href="Jumbo action link"
-            role="button">
-            S'inscrire
-          </a>
-        </p>
-      </div>
-    </div>
-  </div> #}
   <div class="container mt-5" id="container">
     <h1 class="display-4 font-weight-bold" id="h1">
       Deux sessions de formation, inscrivez-vous avant
@@ -109,17 +89,56 @@
     <a href="{{ path('choix_new') }}" class="btn btn-danger m-3">Inscription</a>
     <p>*places limitées</p>
   </div>
+  {# <div class="jumbotron card card-image" id="jumbotron">
+    <div class="text-white text-center py-5 px-4">
+        <div>
+            <p class="mx-5 mb-5">Bienvenue sur la plateforme SCP Formation
+            </p>
+            <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Nous vous accompagnons dans vos projet , <br> une chance pour tous !</strong></h2>
 
-  {# <section id="section">
-    <div class="container">
-      
-        <h3 class="text-center pt-5">
-          Bientôt une session de formation disponible inscrivez vous ci-dessous
-        </h3>
-      
-      <div class="d-flex justify-content-center">
-        <a href="" class="btn btn-success">S'inscrire</a>
-      </div>
+            <button type="button" class="btn btn-light">+ d'information</button>
+        </div>
     </div>
-  </section> #}
+</div> #}
+  
+  
+<section>
+<div class="jumbotron text-center" id="jumbotron-b">
+  <div class="container">
+    <!-- Title -->
+    <h2 class="card-title h2">A propos de nous</h2>
+    <!-- Subtitle -->
+    <p class="blue-text my-4 font-weight-bold">POUR QUEL PUBLIC ?</p>
+
+    <!-- Grid row -->
+    <div class="row d-flex justify-content-center">
+
+        <!-- Grid column -->
+        <div class="col-xl-7 pb-2">
+
+            <h6 class="card-text">Salariés, chefs d'entreprise, demandeur d'emplois ou créateur d'entreprise .<br> <br>SCP Formation vous propose les formations suivantes :<br><br> - Comptabilité & Fiscalité.<br><br> - Ressources Humaines & Gestion de Paie .<br><br> - Techniques de recherche d'emploi.<br><br> - Conception graphique & bases de l'utilisation des Outils bureautiques & environnement internet.</h6>
+
+        </div>
+        <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+    <hr class="my-4">
+
+    <p class="blue-text my-4 font-weight-bold">CERTIFICATIONS</p>
+
+    <!-- Grid row -->
+    <div class="row d-flex justify-content-center">
+
+        <!-- Grid column -->
+        <div class="col-xl-7 pb-2">
+
+            <h6 class="card-text">Notre organisme a reçu en juin 2020 le référencement DATADOCK,<br> et est référencé AFDAS(OPCO).</h6>
+
+        </div>
+        <!-- Grid column -->
+  </div>    
+</div>
+</section>
+
 {% endblock %}

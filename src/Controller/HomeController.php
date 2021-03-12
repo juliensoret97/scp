@@ -26,11 +26,10 @@ class HomeController extends AbstractController
      */
     public function adminhome(): Response
     {
-        return $this->render('admin/index.html.twig')
-        ;
+        return $this->render('admin/index.html.twig');
     }
 
-     /**
+    /**
      * @Route("/new", name="choix_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
@@ -44,7 +43,7 @@ class HomeController extends AbstractController
             $entityManager->persist($choix);
             $entityManager->flush();
 
-            $this->addFlash('success',"Votre formulaire a bien été envoyé.");
+            $this->addFlash('success', 'Votre formulaire a bien été envoyé.');
 
             return $this->redirectToRoute('choix_new');
         }

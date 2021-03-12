@@ -36,10 +36,31 @@ body {
     color: black;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    background-color:#696969;
-    color: #fff;
-  }
+#footer {
+    background: #303036;
+    color: white;
+    height: 400px;
+}
+#footer-bottom {
+    background: #698698;
+    height: 80px;
+}
+
+#divf {
+    background: #303036;
+}
+
+#jumbotron {
+    margin: 10px;
+    background-image: url("../img/bg1.jpg");
+    height: 100vh;
+    background-size : cover;
+    
+}
+#jumbotron-b {
+    margin: 10px;
+    /* background-image: url("../img/public.PNG"); */
+    height: 100vh;
+    background-size : cover;
+    
+}
