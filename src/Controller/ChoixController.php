@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ChoixController extends AbstractController
 {
     /**
-     * @Route("/", name="choix_index", methods={"GET"})
+     * @Route("/choix", name="choix_index", methods={"GET"})
      */
     public function index(ChoixRepository $choixRepository): Response
     {
@@ -24,29 +24,6 @@ class ChoixController extends AbstractController
             'choixes' => $choixRepository->findAll(),
         ]);
     }
-
-    // /**
-    //  * @Route("/new", name="choix_new", methods={"GET","POST"})
-    //  */
-    // public function new(Request $request): Response
-    // {
-    //     $choix = new Choix();
-    //     $form = $this->createForm(ChoixType::class, $choix);
-    //     $form->handleRequest($request);
-
-    //     if ($form->isSubmitted() && $form->isValid()) {
-    //         $entityManager = $this->getDoctrine()->getManager();
-    //         $entityManager->persist($choix);
-    //         $entityManager->flush();
-
-    //         return $this->redirectToRoute('home');
-    //     }
-
-    //     return $this->render('choix/new.html.twig', [
-    //         'choix' => $choix,
-    //         'form' => $form->createView(),
-    //     ]);
-    // }
 
     /**
      * @Route("/{id}", name="choix_show", methods={"GET"})

@@ -1,0 +1,40 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Soutien index{% endblock %}
+
+{% block body %}
+    <h1>Inscris aux soutiens scolaires :</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Numero</th>
+                <th>Email</th>
+                <th>Choix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for soutien in soutiens %}
+            <tr>
+                <td>{{ soutien.nom }}</td>
+                <td>{{ soutien.prenom }}</td>
+                <td>{{ soutien.numero }}</td>
+                <td>{{ soutien.email }}</td>
+                <td>{{ soutien.choix }}</td>
+                <td>
+                    <a href="{{ path('soutien_show', {'id': soutien.id}) }}">editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Pas d'inscris.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('soutien_new') }}">Inscrire un élève</a>
+{% endblock %}

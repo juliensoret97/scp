@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SoutienController!{% endblock %}
+{% block title %}Soutien Scolaire{% endblock %}
 
 {% block body %}
 <style>
@@ -8,13 +8,66 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/scp/src/Controller/SoutienController.php'|file_link(0) }}">src/Controller/SoutienController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/scp/templates/soutien/index.html.twig'|file_link(0) }}">templates/soutien/index.html.twig</a></code></li>
-    </ul>
+<div class="container">
+	<h1 class="bg bg-dark">
+		Soutien disponible chez nous : 
+		<br>
+		<h3 class="bg bg-light"> Du CP à la Terminale</h3>
+	</h1>
+	<hr>
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/francais.jpg" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">Français</h2>
+					<h5></h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/math.png" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">Mathématique</h2>
+					<h5></h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/anglais.png" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">Anglais</h2>
+					<h5></h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/histoire.jpg" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">Histoire</h2>
+					<h5></h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/geographie.png"  id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">Géographie</h2>
+					<h5></h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+</div>
+
 {% endblock %}

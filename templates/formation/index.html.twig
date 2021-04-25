@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FormationController!{% endblock %}
+{% block title %}Formation{% endblock %}
 
 {% block body %}
 <style>
@@ -8,13 +8,107 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/scp/src/Controller/FormationController.php'|file_link(0) }}">src/Controller/FormationController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/scp/templates/formation/index.html.twig'|file_link(0) }}">templates/formation/index.html.twig</a></code></li>
-    </ul>
+<div class="container">
+	<h1 class="bg bg-dark">Formation disponible chez nous :</h1>
+	<hr>
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/rh.jpg" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">RESSOURCES HUMAINES</h2>
+					<h5>
+						Plusieurs modules vous sont proposés pour la gestion de ressources humaines , du droit du travail à la GPEC(Gestion Prévisionnelle des Emplois et des Compétences).
+					</h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/paie.png" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">LA PAIE</h2>
+					<h5>
+						Maîtriser la pratique de la paie avec les bons outils avec une bonne relation des différents acteurs .
+					</h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/compta.jpg" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">COMPTABILITÉ</h2>
+					<h5>
+						Plusieurs modules vous sont proposés de la comptabilité de base à l'élaboration des documents de synthèse .
+					</h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/icon-4.png" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">LA MALETTE DU DIRIGEANT</h2>
+					<h5>
+						Trois grands modules pour le pilotage de votre entreprise .
+					</h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/fisc.jpg"  id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">FISCALITÉ</h2>
+					<h5>
+						Des modules types pour appréhender au mieux les différents régimes fiscaux.
+					</h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/pack.jpg" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">BUREAUTIQUE</h2>
+					<h5>
+						Maîtriser le pack office(word, excel , powerpoint), tout l'environnement informatique et de l'internet .
+					</h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/etude.jpg" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">TECHNIQUE DE RECHERCHE D'EMPLOI</h2>
+					<h5>
+						Tout les bons outils et coaching individuel ou collectif pour décrocher un emploi .
+					</h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3">
+				<img class="card-img-top mx-auto d-block" src="../img/ebp.png" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center">
+					<h2 class="card-title">EBP</h2>
+					<h5>
+						Vente de logiciel EBP et formation assuré .
+					</h5>
+					<a href="#" class="btn btn-warning">+ d'info</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </div>
 {% endblock %}

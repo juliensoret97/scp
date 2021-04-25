@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Inscription Soutien
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1>
+      S'inscrire au soutien scolaire : 
+    </h1>
+
+    {{ include('soutien/_form.html.twig') }}
+
+    <a href="{{ path('soutien_index') }}">Retour au choix</a>
+  </div>
+{% endblock %}

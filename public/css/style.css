@@ -4,6 +4,8 @@ body {
 
 #logo {
     width: 120px;
+    /* position : relative;
+    margin-left: 200%; */
 }
 
 #logoa{
@@ -63,4 +65,12 @@ body {
     height: 100vh;
     background-size : cover;
     
+}
+
+#img-card {
+    width : 150px;
+}
+
+#link_bas_page {
+    color : white;
 }

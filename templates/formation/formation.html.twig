@@ -1,0 +1,40 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}SCP Formation{% endblock %}
+
+{% block body %}
+    <h1>Inscris aux formations :</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Numero</th>
+                <th>Email</th>
+                <th>Choix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for formation in formations %}
+            <tr>
+                <td>{{ formation.nom }}</td>
+                <td>{{ formation.prenom }}</td>
+                <td>{{ formation.numero }}</td>
+                <td>{{ formation.email }}</td>
+                <td>{{ formation.choix }}</td>
+                <td>
+                    <a href="{{ path('formation_show', {'id': formation.id}) }}">editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {# <a href="{{ path('choix_new') }}">Create new</a> #}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Inscription Formation
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1>
+      S'inscrire à une formation : 
+    </h1>
+
+    {{ include('formation/_form.html.twig') }}
+  </div>
+
+  <a href="{{ path('formation') }}">Retour au choix</a>
+{% endblock %}
