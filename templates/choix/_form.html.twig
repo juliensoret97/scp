@@ -1,5 +1,32 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="checkbox"> J'ai lu et j'approuve la politique de confidentialité <br><br>
-    <button class="btn btn-danger">{{ button_label|default('Envoyer') }}</button>
+<div class="col">
+  <div class="row m-2">
+    <label for="prenom">Votre nom :</label>
+    {{ form_widget(form.nom) }}
+  </div>
+  <div class="row m-2">
+    <label for="prenom">Votre prénom :</label>
+    {{ form_widget(form.prenom) }}
+  </div>
+  <div class="row m-2">
+    <label for="prenom">Votre numéro de téléphone :</label>
+    {{ form_widget(form.numero) }}
+  </div>
+  <div class="row m-2">
+    <label for="prenom">Votre email:</label>
+    {{ form_widget(form.email) }}
+  </div>
+  <div class="row m-2">
+    <label for="prenom">Votre choix de formation :</label>
+    {{ form_widget(form.choix) }}
+  </div>
+  <div class="row m-2">
+    {{
+      form_widget(form.accepter)
+    }}
+    <p><a href="{{ asset('pdf/politique.pdf') }}" class="ml-1" target="blank">la
+      politique de confidentialité </a> et les <a href="{{ asset('pdf/CGU.pdf') }}"> conditions d'utilisation .</a></p>
+  </div>
+</div>
+<button class="btn btn-danger">{{ button_label|default('Envoyer') }}</button>
 {{ form_end(form) }}

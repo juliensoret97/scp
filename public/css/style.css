@@ -28,6 +28,10 @@ body {
 
 }
 
+#img_accueil{
+    width: 100px;
+}
+
 #container {
     background-color: white;
     border: white 5px ;

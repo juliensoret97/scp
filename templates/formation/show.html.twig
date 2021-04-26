@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'adminbase.html.twig' %}
 
 {% block title %}Formation{% endblock %}
 
@@ -34,9 +34,10 @@
         </tbody>
     </table>
 
-    <a href="{{ path('formation_inscris') }}">back to list</a>
+    <a href="{{ path('formation_inscris') }}" class="btn btn-info">back to list</a>
+    
 
-    <a href="{{ path('formation_edit', {'id': formation.id}) }}">edit</a>
+    {# <a href="{{ path('formation_edit', {'id': formation.id}) }}">edit</a> #}
 
     {{ include('formation/_delete_form.html.twig') }}
 {% endblock %}

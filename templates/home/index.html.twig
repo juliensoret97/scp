@@ -12,12 +12,11 @@
   </style>
   <div class="container mt-5" id="container">
     <h1 class="display-4 font-weight-bold" id="h1">
-      Deux sessions de formation, inscrivez-vous avant
-      le 12 mars 2021 ! 
+      Deux sessions de formation, vous pouvez toujours vous inscrire ! 
     </h1>
     <div class="row">
       <div class="col-sm-6 py-2">
-        <div class="card h-100 text-white bg-danger">
+        <div class="card h-100 text-white bg-info">
           <div class="card-body">
             <h3 class="card-title">
               CCP Secrétaire comptable
@@ -45,14 +44,14 @@
             <p class="card-text">
               Niveau IV (BP, BT, baccalauréat professionnel)
             </p>
-            <a href="{{ asset('pdf/ccpsc.pdf') }}" class="btn btn-info">
+            <a href="{{ asset('pdf/ccpsc.pdf') }}" class="btn btn-warning">
               Pour plus d'informations (PDF)
             </a>
           </div>
         </div>
       </div>
       <div class="col-sm-6 py-2">
-        <div class="card h-100 text-white bg-danger">
+        <div class="card h-100 text-white bg-info">
           <div class="card-body">
             <h3 class="card-title">
               CCP Assistant Ressources Humaines
@@ -79,31 +78,19 @@
             <p class="card-text">
               Niveau III (BTS, DUT)
             </p>
-            <a href="{{ asset('pdf/ccparh.pdf') }}" class="btn btn-info">
+            <a href="{{ asset('pdf/ccparh.pdf') }}" class="btn btn-warning">
               Pour plus d'informations (PDF)
             </a>
           </div>
         </div>
       </div>
     </div>
-    <a href="{{ path('choix_new') }}" class="btn btn-danger m-3">Inscription</a>
+    <a href="{{ path('choix_new') }}" class="btn btn-outline-warning m-3">Inscription</a>
     <p>*places limitées</p>
   </div>
-  {# <div class="jumbotron card card-image" id="jumbotron">
-    <div class="text-white text-center py-5 px-4">
-        <div>
-            <p class="mx-5 mb-5">Bienvenue sur la plateforme SCP Formation
-            </p>
-            <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Nous vous accompagnons dans vos projet , <br> une chance pour tous !</strong></h2>
-
-            <button type="button" class="btn btn-light">+ d'information</button>
-        </div>
-    </div>
-</div> #}
-  
   
 <section>
-<div class="jumbotron text-center" id="jumbotron-b">
+<div class="jumbotron text-center bg bg-info" id="jumbotron-b">
   <div class="container">
     <!-- Title -->
     <h2 class="card-title h2">A propos de nous</h2>
@@ -136,8 +123,28 @@
             <h6 class="card-text">Notre organisme a reçu en juin 2020 le référencement DATADOCK,<br> et est référencé AFDAS(OPCO).</h6>
 
         </div>
+        
         <!-- Grid column -->
-  </div>    
+  </div> 
+  <!-- img acceuil -->  
+  <div class="row">
+          <div class="col-sm-2"> 
+            <img src="{{ asset('img/afdas.png')}}" id="img_accueil">
+          </div>
+          <div class="col-sm-2"> 
+            <img src="{{ asset('img/datadock.png')}}" id="img_accueil">
+          </div>
+          <div class="col-sm-2"> 
+            <img src="{{ asset('img/forma.png')}}" id="img_accueil">
+          </div>
+          <div class="col-sm-2"> 
+            <img src="{{ asset('img/pole-emploi.png')}}" id="img_accueil">
+          </div>
+          <div class="col-sm-2 mt-2"> 
+            <img src="{{ asset('img/opco.png')}}" id="img_accueil">
+          </div>
+        
+        </div> 
 </div>
 </section>
 
