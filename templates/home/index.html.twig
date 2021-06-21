@@ -5,23 +5,19 @@
 {% endblock %}
 
 {% block body %}
-  <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font:
-    18px/1.5 sans-serif; } .example-wrapper code { background: #F5F5F5; padding:
-    2px 6px; }
-  </style>
-  <div class="container mt-5" id="container">
-    <h1 class="display-4 font-weight-bold" id="h1">
+<section class="bg bg-primary" id="sectionHeadHome">
+  <div class="container" id="container">
+    <h1 class="display-4 font-weight-bold" id="h1HomeHead">
       Deux sessions de formation, vous pouvez toujours vous inscrire ! 
     </h1>
-    <div class="row">
+    <div class="row" id="rowHeadHome">
       <div class="col-sm-6 py-2">
         <div class="card h-100 text-white bg-info">
           <div class="card-body">
             <h3 class="card-title">
               CCP Secrétaire comptable
             </h3>
-            <h5>
+            <h5 class="h5Home">
               Objectif de la formation :
             </h5>
             <p class="card-text">
@@ -32,13 +28,13 @@
               - Assurer les travaux courants de comptabilité <br />
               - Préparer la paie et les déclarations sociales courantes.
             </p>
-            <h5>
+            <h5 class="h5Home">
               Prérequis :
             </h5>
             <p class="card-text">
               Niveau V (BEP, CAP, VAE)
             </p>
-            <h5>
+            <h5 class="h5Home">
               Niveau à la sortie de la formation :
             </h5>
             <p class="card-text">
@@ -56,7 +52,7 @@
             <h3 class="card-title">
               CCP Assistant Ressources Humaines
             </h3>
-            <h5>
+            <h5 class="h5Home">
               Objectif de la formation :
             </h5>
             <p class="card-text">
@@ -66,13 +62,13 @@
               - Mettre en œuvre les processus de recrutement,d’intégration et de
               formation des salariés.
             </p>
-            <h5>
+            <h5 class="h5Home">
               Prérequis :
             </h5>
             <p class="card-text">
               Niveau IV (Baccalauréat, VAE)
             </p>
-            <h5>
+            <h5 class="h5Home">
               Niveau à la sortie de la formation :
             </h5>
             <p class="card-text">
@@ -85,17 +81,17 @@
         </div>
       </div>
     </div>
-    <a href="{{ path('choix_new') }}" class="btn btn-outline-warning m-3">Inscription</a>
-    <p>*places limitées</p>
+    <a href="{{ path('choix_new') }}" class="btn btn-outline-warning " id="btnHomeInscription">Inscription</a>
+    {# <p>*places limitées</p> #}
   </div>
-  
+</section>
 <section>
 <div class="jumbotron text-center bg bg-info" id="jumbotron-b">
   <div class="container">
     <!-- Title -->
-    <h2 class="card-title h2">A propos de nous</h2>
+    <h1 class="card-title h1">A propos de nous</h1>
     <!-- Subtitle -->
-    <p class="blue-text my-4 font-weight-bold">POUR QUEL PUBLIC ?</p>
+    <p class="blue-text my-4 font-weight-bold" id="pHomepropos">POUR QUEL PUBLIC ?</p>
 
     <!-- Grid row -->
     <div class="row d-flex justify-content-center">
@@ -103,7 +99,7 @@
         <!-- Grid column -->
         <div class="col-xl-7 pb-2">
 
-            <h6 class="card-text">Salariés, chefs d'entreprise, demandeur d'emplois ou créateur d'entreprise .<br> <br>SCP Formation vous propose les formations suivantes :<br><br> - Comptabilité & Fiscalité.<br><br> - Ressources Humaines & Gestion de Paie .<br><br> - Techniques de recherche d'emploi.<br><br> - Conception graphique & bases de l'utilisation des Outils bureautiques & environnement internet.</h6>
+            <h6 class="card-text" id="h6_home">Salariés, chefs d'entreprise, demandeur d'emplois ou créateur d'entreprise .<br> <br>SCP Formation vous propose les formations suivantes :<br><br> - Comptabilité & Fiscalité.<br><br> - Ressources Humaines & Gestion de Paie .<br><br> - Techniques de recherche d'emploi.<br><br> - Conception graphique & bases de l'utilisation des Outils bureautiques & environnement internet.</h6>
 
         </div>
         <!-- Grid column -->
@@ -112,7 +108,7 @@
     <!-- Grid row -->
     <hr class="my-4">
 
-    <p class="blue-text my-4 font-weight-bold">CERTIFICATIONS</p>
+    <p class="blue-text my-4 font-weight-bold" id="pHomepropos">CERTIFICATIONS</p>
 
     <!-- Grid row -->
     <div class="row d-flex justify-content-center">
@@ -120,27 +116,24 @@
         <!-- Grid column -->
         <div class="col-xl-7 pb-2">
 
-            <h6 class="card-text">Notre organisme a reçu en juin 2020 le référencement DATADOCK,<br> et est référencé AFDAS(OPCO).</h6>
+            <h6 class="card-text mb-3" id="h6_home">Notre organisme a reçu en juin 2020 le référencement DATADOCK,<br> et est référencé AFDAS(OPCO).</h6>
 
         </div>
         
         <!-- Grid column -->
   </div> 
   <!-- img acceuil -->  
-  <div class="row">
-          <div class="col-sm-2"> 
-            <img src="{{ asset('img/afdas.png')}}" id="img_accueil">
+  <div class="row" id="rowPropos">
+          <div class="col-md-2"> 
+            <img src="{{ asset('img/afdas.png')}}" id="img_accueilaf">
           </div>
-          <div class="col-sm-2"> 
-            <img src="{{ asset('img/datadock.png')}}" id="img_accueil">
+          <div class="col-md-2"> 
+            <img src="{{ asset('img/datadock.png')}}" id="img_accueildt">
           </div>
-          <div class="col-sm-2"> 
-            <img src="{{ asset('img/forma.png')}}" id="img_accueil">
-          </div>
-          <div class="col-sm-2"> 
+          <div class="col-md-2"> 
             <img src="{{ asset('img/pole-emploi.png')}}" id="img_accueil">
           </div>
-          <div class="col-sm-2 mt-2"> 
+          <div class="col-md-2 "> 
             <img src="{{ asset('img/opco.png')}}" id="img_accueil">
           </div>
         

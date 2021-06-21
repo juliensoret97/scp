@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block body %}
-  <div class="container">
-    <h1>
+  <div class="container mt-3 ">
+    <h1 class="ml-4" id="new">
       S'inscrire à une formation : 
     </h1>
 
     {{ include('formation/_form.html.twig') }}
   </div>
 
-  <a href="{{ path('formation') }}">Retour au choix</a>
+  
 {% endblock %}

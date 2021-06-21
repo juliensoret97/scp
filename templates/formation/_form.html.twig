@@ -17,7 +17,7 @@
     {{ form_widget(form.email) }}
   </div>
   <div class="row m-2">
-    <label for="prenom">Votre choix de formation (<U>afin de vous proposer un programme à la carte, insérez dans la zone de texte les compétences que vous souhaiteriez acquérir..</U>):</label>
+    <label for="prenom">Votre choix de formation :</label>
     {{ form_widget(form.choix) }}
   </div>
   <div class="row m-2">
@@ -27,5 +27,7 @@
       politique de confidentialité </a> et les <a href="{{ asset('pdf/CGU.pdf') }}"> conditions d'utilisation .</a></p>
   </div>
 </div>
-<button class="btn btn-danger">{{ button_label|default('Envoyer') }}</button>
+<button class="btn btn-danger ml-4">{{ button_label|default('Envoyer') }}</button>
+<br />
+<a class="btn btn-info mt-2 mb-2 ml-4" href="{{ path('formation') }}">Voir les formations</a>
 {{ form_end(form) }}

@@ -28,5 +28,7 @@
   </div>
 </div>
 
-<button class="btn btn-danger">{{ button_label|default('Envoyer') }}</button>
+<button class="btn btn-danger ml-4">{{ button_label|default('Envoyer') }}</button>
+<br />
+<a class="btn btn-info mt-2 mb-2 ml-4" href="{{ path('soutien_index') }}">Voir les soutiens scolaires</a>
 {{ form_end(form) }}

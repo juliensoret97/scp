@@ -23,6 +23,7 @@
       <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
       <link rel="stylesheet"
         href="//use.fontawesome.com/releases/v5.0.7/css/all.css" />
+	  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     {% endblock %}
 
     {% block javascripts %}
@@ -39,7 +40,6 @@
       <script src="https://kit.fontawesome.com/22bcdb4e71.js"
         crossorigin="anonymous"></script>
     {% endblock %}
-  <div class="container-fluid" id="entete">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 <a href="{{ path('home') }}"><img src="{{ asset('img/logo.PNG') }}" id="logo" /></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarColor01"    aria-controls="navbarColor01"  aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -51,28 +51,29 @@
    <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          Formation        </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="{{ path('formation') }}">+</a>
+      <a class="dropdown-item" href="{{ path('formation') }}">Voir plus</a>
+	  <hr class="my-1">
       <a class="dropdown-item" href="{{ path('formation_new') }}">S'inscrire</a>
    </li>
    <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          Soutien        </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         <a class="dropdown-item" href="{{ path('soutien_index') }}">+</a>
+         <a class="dropdown-item" href="{{ path('soutien_index') }}">Voir plus</a>
+		 <hr class="my-1">
          <a class="dropdown-item" href="{{ path('soutien_new') }}">S'inscrire</a>
    </li>
 </ul>
-</div>
-<ul>
-					          {# 
+{# <ul>
+					           
 					<li class="nav-item"><a class="btn btn-outline-danger" href="{{ path('app_login') }}">Se connecter</a></li>
-					 #}          {% if app.user %}            
+					          {% if app.user %}            
 					<a href="{{ path('app_logout') }}" class="btn btn-danger">              Se déconnecter            </a>
 					          {% else %}            
 					<a class="btn btn-outline-success" href="{{ path('app_login') }}">              Se connecter            </a>
 					          {% endif %}          {% if is_granted('ROLE_ADMIN') %}            
 					<a class="m-3" href="{{ path('admin_home') }}"><img src="https://img.icons8.com/material-rounded/24/4a90e2/admin-settings-male.png" id="logoa" /></a>
 					          {% endif %}        
-				</ul>
+				</ul> #}
 			</div>
 		</nav>
 	</head>
@@ -82,17 +83,16 @@
     {% endblock %}
  </body>
 <!-- Footer -->
-<footer class="mt-5 text-center text-white" id="footer"><!-- Grid container -->
-<div class="container p-4" id="divf">
+<footer class="text-center text-white bg bg-primary" id="footer"><!-- Grid container -->
+<div class="container p-4 bg bg-primary" >
 	<!-- Section: Social media -->
 	<section class="mb-4">
-		<h5 style="color : white">
-			          Rejoignez-nous :        
+		<h5 id="titre_bas_page">
+			          Rejoignez-nous     
 		</h5>
 		<!-- Facebook -->
 		<a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/scprint974" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
-		<!-- Instagram -->
-		<a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/scprintreunion974/?hl=fr" role="button" target="_blank"><i class="fab fa-instagram"></i></a>
+		
 	</section>
 	<!-- Section: Social media -->
 	<!-- Section: Form -->
@@ -107,31 +107,31 @@
 	</section>
 	<!-- Section: Text -->
 	<!-- Section: Links -->
-	<section class="" id="section-footer">
+	<section class="">
 		<!-- Grid row -->
 		<div class="row">
 			<!-- Grid column -->
-			<div class="col-lg-3 col-md-7 mb-4 mb-md-0">
-				<h5 class="text-uppercase" style="color : white">
-					              Infos :            
+			<div class="col-lg-6 col-md-7 mb-4 mb-md-0" id="col_bas_page">
+				<h5 class="text-uppercase bg bg-primary mb-3" id ="titre_bas_page">
+					              Infos             
 				</h5>
-				<i class="fas fa-location">              121 rue du musée Piton Saint-leu , 97424            </i>
+				<i class="fas fa-map-marker" id="link_bas_page"> 121 rue du musée Piton Saint-leu , 97424 </i>
 				<br />
-				<i class="fas fa-envelope">  scprint.run@gmail.com</i>
-				<i class="fas fa-phone">  06 92 68 03 73</i>
+				<i class="fas fa-envelope-square" id="link_bas_page">  scprint.run@gmail.com</i>
+				<br>
+				<i class="fas fa-phone-volume" id="link_bas_page">  06 92 68 03 73</i>
 			</div>
-			<div class="col-lg-3 col-md-7 mb-4 mb-md-0">
-				<h5 class="text-uppercase" style="color : white">
-					              MENU :            
+			<div class="col-lg-6 col-md-7 mb-4 mb-md-0" id="col_bas_page" >
+				<h5 class="text-uppercase mb-3" id ="titre_bas_page">
+					              MENU             
 				</h5>
-				<i class="fas fa-home"></i>
 				<a href="{{ path('home') }}" id="link_bas_page">Accueil</a>
 				<br>
 				<a href="{{ asset('pdf/CGU.pdf') }}" id="link_bas_page" target="_blank">Conditions générales d'utilisation</a>
         <br>
 				<a href="{{ asset('pdf/politique.pdf') }}" id="link_bas_page" target="_blank">Politique de confidentialité</a>
         <br>
-				<a href="#entete" id="link_bas_page">Haut de page</a>
+				{# <a href="#entete" id="link_bas_page">Haut de page</a> #}
 			</div>
 			<!-- Grid column -->
 		</div>
