@@ -23,6 +23,11 @@ body {
     color:white;
 }
 
+#h6_home {
+    color:white ;
+    font-size: 15px;
+}
+
 #btnHomeInscription{
     margin-right: 50%;
     margin-top: 10px;
@@ -77,11 +82,11 @@ body {
 
 #jumbotron-b {
     color : white;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 0;
     /* background-image: url("../img/public.PNG"); */
-    height: 75vh;
-    
+    height: 85vh;
+    border-radius: none;
     
 }
 
@@ -166,6 +171,10 @@ body {
        
     }
 
+    #jumbotron-b{
+        height: 95vh;
+    }
+
     #h6_home{
         color: white;
     }
@@ -181,3 +190,34 @@ body {
         font-size: 25px;
     }
   }
+
+  /* iphone 6/7/8 */
+
+  @media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) {
+
+    #jumbotron-b{
+        height: 120vh;
+    }
+  }
+
+  /* ipad */
+  @media only screen 
+    and (device-width : 768px) 
+    and (device-height : 1024px) 
+    and (-webkit-device-pixel-ratio : 2) {
+        #jumbotron-b{
+            height: 65vh;
+        }
+    }
+    /* ipad pro */
+    @media only screen 
+    and (device-width : 1024px) 
+    and (device-height : 1366px) 
+    and (-webkit-device-pixel-ratio : 2) {
+        #jumbotron-b{
+            height: 50vh;
+        }
+    }
