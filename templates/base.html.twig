@@ -23,7 +23,7 @@
       <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
       <link rel="stylesheet"
         href="//use.fontawesome.com/releases/v5.0.7/css/all.css" />
-	  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     {% endblock %}
 
     {% block javascripts %}
@@ -40,7 +40,7 @@
       <script src="https://kit.fontawesome.com/22bcdb4e71.js"
         crossorigin="anonymous"></script>
     {% endblock %}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
 <a href="{{ path('home') }}"><img src="{{ asset('img/logo.PNG') }}" id="logo" /></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarColor01"    aria-controls="navbarColor01"  aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 <div class="collapse navbar-collapse ml-5" id="navbarColor01">
@@ -49,14 +49,14 @@
       <a class="nav-link" href="{{ path('home') }}">   Accueil  <span class="sr-only">(current)</span></a>
    </li>
    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          Formation        </a>
+      <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">          Formation        </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
       <a class="dropdown-item" href="{{ path('formation') }}">Voir plus</a>
 	  <hr class="my-1">
       <a class="dropdown-item" href="{{ path('formation_new') }}">S'inscrire</a>
    </li>
    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">          Soutien        </a>
+      <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">          Soutien        </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
          <a class="dropdown-item" href="{{ path('soutien_index') }}">Voir plus</a>
 		 <hr class="my-1">
@@ -115,11 +115,11 @@
 				<h5 class="text-uppercase bg bg-primary mb-3" id ="titre_bas_page">
 					              Infos             
 				</h5>
-				<i class="fas fa-map-marker" id="link_bas_page"> 121 rue du musée Piton Saint-leu , 97424 </i>
+				<a id="link_bas_page"> 121 rue du musée Piton Saint-leu , 97424 </a>
 				<br />
-				<i class="fas fa-envelope-square" id="link_bas_page">  scprint.run@gmail.com</i>
+				<a id="link_bas_page">  scprint.run@gmail.com</a>
 				<br>
-				<i class="fas fa-phone-volume" id="link_bas_page">  06 92 68 03 73</i>
+				<a id="link_bas_page">  06 92 68 03 73</a>
 			</div>
 			<div class="col-lg-6 col-md-7 mb-4 mb-md-0" id="col_bas_page" >
 				<h5 class="text-uppercase mb-3" id ="titre_bas_page">
