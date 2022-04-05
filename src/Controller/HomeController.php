@@ -30,6 +30,14 @@ class HomeController extends AbstractController
     }
 
     /**
+     * @Route("/apropos", name="a_propos")
+     */
+    public function aPropos(): Response
+    {
+        return $this->render('home/apropos.html.twig');
+    }
+
+    /**
      * @Route("/new", name="choix_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response

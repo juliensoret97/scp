@@ -2,5 +2,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[twig]": {
+    "editor.defaultFormatter": "mblode.twig-language-2"
   }
 }

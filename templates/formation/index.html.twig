@@ -16,11 +16,11 @@
 			<div class="card m-3" id="card_formation_top">
 				<img class="card-img-top mx-auto d-block" src="../img/rh.jpg" id="img-card" alt="the image alt text here">
 				<div class="card-body text-center d-flex flex-column ">
-					<h2 class="card-title">RESSOURCES HUMAINES</h2>
+					<h2 class="card-title">Ressources Humaines</h2>
 					<p class="mt-auto" id="p-formation">
 						Plusieurs modules vous sont proposés pour la gestion de ressources humaines , du droit du travail à la GPEC (Gestion Prévisionnelle des Emplois et des Compétences)
 					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+					<a href="{{ asset('pdf/ARH.pdf')}}" target="blank" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
 				</div>
 			</div>
 		</div>
@@ -32,7 +32,7 @@
 					<p class="mt-auto" id="p-formation">
 						La validation des acquis de l’expérience permet, à toute personne engagée dans la vie active, d’obtenir une certification professionnelle par la validation de son expérience acquise dans le cadre d’une activité professionnelle et/ou extra-professionnelle. 
 					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+					<a href="{{ asset('pdf/vae.pdf')}}" target="blank" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
 				</div>
 			</div>
 		</div>
@@ -40,23 +40,12 @@
 			<div class="card m-3" id="card_formation_top">
 				<img class="card-img-top mx-auto d-block" src="../img/paie.png" id="img-card" alt="the image alt text here">
 				<div class="card-body text-center d-flex flex-column ">
-					<h2 class="card-title">LA PAIE</h2>
+					<h2 class="card-title">COMPTABILITÉ ET PAIE</h2>
 					<p class="mt-auto" id="p-formation">
-						Maîtriser la pratique de la paie avec les bons outils avec une bonne relation des différents acteurs 
+						Maîtriser la pratique de la paie avec les bons outils avec une bonne relation des différents acteurs.<br> 
+						Plusieurs modules vous sont proposés de la comptabilité de base à l'élaboration des documents de synthèse
 					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-4">
-			<div class="card m-3" id="card_formation_middle">
-				<img class="card-img-top mx-auto d-block" src="../img/compta.jpg" id="img-card" alt="the image alt text here">
-				<div class="card-body text-center d-flex flex-column ">
-					<h2 class="card-title">COMPTABILITÉ</h2>
-					<p class="mt-auto" id="p-formation">
-						Plusieurs modules vous sont proposés de la comptabilité de base à l'élaboration des documents de synthèse 
-					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+					<a href="{{ asset('pdf/comptapaie.pdf')}}" target="blank" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
 				</div>
 			</div>
 		</div>
@@ -68,7 +57,7 @@
 					<p class="mt-auto" id="p-formation">
 						Trois grands modules pour le pilotage de votre entreprise 
 					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+					<a href="{{ asset('pdf/mld.pdf')}}" target="blank" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
 				</div>
 			</div>
 		</div>
@@ -80,7 +69,7 @@
 					<p class="mt-auto" id="p-formation">
 						Des modules types pour appréhender au mieux les différents régimes fiscaux
 					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+					<a name="linkpdf" href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
 				</div>
 			</div>
 		</div>
@@ -92,7 +81,7 @@
 					<p class="mt-auto" id="p-formation">
 						Maîtriser le pack office(word, excel , powerpoint), tout l'environnement informatique et de l'internet 
 					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+					<a name ="linkpdf" href="{{ path("infoformation")}}" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
 				</div>
 			</div>
 		</div>
@@ -104,7 +93,7 @@
 					<p class="mt-auto" id="p-formation">
 						Tout les bons outils et coaching individuel ou collectif pour décrocher un emploi 
 					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+					<a href="{{ asset('pdf/CGU.pdf')}}" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
 				</div>
 			</div>
 		</div>
@@ -116,7 +105,19 @@
 					<p class="mt-auto" id="p-formation">
 						Vente de logiciel EBP et formation assuré 
 					</p>
-					<a href="#" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+					<a href="{{ path("infoformation")}}" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card m-3" id="card_formation_bot">
+				<img class="card-img-top mx-auto d-block" src="../img/ebp.png" id="img-card" alt="the image alt text here">
+				<div class="card-body text-center d-flex flex-column ">
+					<h2 class="card-title">EBP</h2>
+					<p class="mt-auto" id="p-formation">
+						Vente de logiciel EBP et formation assuré 
+					</p>
+					<a href="{{ asset("")}}" class="btn btn-warning mt-auto" id="p-formation">plus d'info</a>
 				</div>
 			</div>
 		</div>

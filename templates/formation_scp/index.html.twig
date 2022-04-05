@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formations
+{% endblock %}
+
+{% block body %}
+
+	<div class="container">
+		<h1 class="h1 mt-3">Formation disponible chez nous :</h1>
+		<hr>
+		<div class="container">
+			<div class="row mt-3 ml-3">
+				{% for formation_scp in formation_scps %}
+					<div class="col-sm-6">
+						<div class="container mt-5">
+							<div class="card m-3" id="card_formation_top">
+								<div class="card-body text-center d-flex flex-column">
+									<div class="card-title">
+										<h5>
+											{{ formation_scp.titre }}
+										</h5>
+										<hr>
+									</div>
+
+									<div class="container">
+										<img class="card-img-top mx-auto d-block" src="{{ asset('img/' ~ formation_scp.image) }}" id="img_card"/>
+									</div>
+								</div>
+								<div class="card-body" style="text-align: left;  font-size: 18px;">
+									{{ formation_scp.info }}
+								</div>
+								<a href="{{ asset('pdf/' ~ formation_scp.plaquette)}}" target="blank" class="btn btn-warning mt-auto" id="p-formation">Voir plus</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Formation;
 use App\Form\FormationType;
 use App\Repository\FormationRepository;
+use PhpParser\Node\Scalar\MagicConst\File;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,6 +22,15 @@ class FormationController extends AbstractController
     public function index(): Response
     {
         return $this->render('formation/index.html.twig');
+    }
+
+     /**
+     * @Route("/detail", name="infoformation", methods={"GET"})
+     */
+    public function detail(): Response
+    {
+        
+        return $this->render('formation/info.html.twig');
     }
 
     /**

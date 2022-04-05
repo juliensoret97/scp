@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	SCP Formation
+{% endblock %}
+
+{% block body %}
+	<div class="container" id="cont_a-propos">
+		<h1 class="h1 mt-3">A propos de nous :</h1>
+		<hr>
+
+		<h3>POUR QUEL PUBLIC ?</h3>
+		<p class="a_propos_text">Notre centre de formation accueille : salariés, chefs d'entreprise, demandeur d'emplois ou créateur d'entreprise .
+			<br>
+
+			SCP Formation vous propose les formations suivantes :
+			<br>
+
+			- Comptabilité & Fiscalité.
+			<br>
+
+			- Ressources Humaines & Gestion de Paie .
+			<br>
+
+			 Techniques de recherche d'emploi.
+			<br>
+
+			- Conception graphique & bases de l'utilisation des Outils bureautiques & environnement internet.
+			<br></p>
+        
+		<h3>Accessibilité</h3>
+		<p class="a_propos_text">Toutes nos formations sont accessibles aux personnes en situation d'handicap.
+			<br>
+			Présentiel : site accessible
+			<br>
+			Distanciel : plateforme digitale
+		</p>
+        <div class="container">
+		<a href="https://www.agefiph.fr/" target="_blank"><img src="{{asset('img/agefiph.gif')}}" class="imgpropos" alt=""></a>
+		<a href="https://www.capemploi-974.com/" target="_blank"><img src="{{asset('img/capemploi.jfif')}}" class="imgpropos" alt=""></a>
+		<a href="https://www.pole-emploi.fr/region/reunion/" target="_blank"><img src="{{asset('img/pole-emploi.png')}}" class="imgpropos" alt=""></a>
+		<a href="https://www.afpa.fr/" target="_blank"><img src="{{asset('img/afpa.jpg')}}" class="imgpropos" alt=""></a>
+		<a href="https://www.francecompetences.fr/" target="_blank"><img src="{{asset('img/fp.jpg')}}" class="imgpropos" alt=""></a>
+        </div>
+	</div>
+	{# <section class="mt-5 mb-2" id="sectionapropos">
+			<div class="container" id="contapropos">
+				<h1 style="color:white">
+					À propos de notre centre de formation</h1>
+				<h3 style="color:white">POUR QUEL PUBLIC ?</h3>
+				<p>Salariés, chefs d'entreprise, demandeur d'emplois ou créateur d'entreprise .
+					<br>
+	
+					SCP Formation vous propose les formations suivantes :
+					<br>
+	
+					- Comptabilité & Fiscalité.
+					<br>
+	
+					- Ressources Humaines & Gestion de Paie .
+					<br>
+	
+					- Techniques de recherche d'emploi.
+					<br>
+	
+					- Conception graphique & bases de l'utilisation des Outils bureautiques & environnement internet.
+					<br></p>
+				<h3 style="color : white">Accessibilité</h3>
+				<p>Toutes nos formations sont accessibles aux personnes en situation d'handicap
+					<br>
+					- Présentiel : site accessible
+					<br>
+					- Distanciel : plateforme digitale
+				</p>
+				<a href="https://www.agefiph.fr/" target="_blank"><img src="{{asset('img/agefiph.gif')}}" class="imgpropos" alt=""></a>
+				<a href="https://www.capemploi-974.com/" target="_blank"><img src="{{asset('img/capemploi.jfif')}}" class="imgpropos" alt=""></a>
+				<a href="https://www.pole-emploi.fr/region/reunion/" target="_blank"><img src="{{asset('img/pole-emploi.png')}}" class="imgpropos" alt=""></a>
+				<a href="https://www.afpa.fr/" target="_blank"><img src="{{asset('img/afpa.jpg')}}" class="imgpropos" alt=""></a>
+				<a href="https://www.francecompetences.fr/" target="_blank"><img src="{{asset('img/fp.jpg')}}" class="imgpropos" alt=""></a>
+			</div>
+	
+		</section> #}
+{% endblock %}

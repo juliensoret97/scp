@@ -25,11 +25,12 @@ class FormationType extends AbstractType
                 'choices' => [
                     'Ressources Humaines' => 'Ressources Humaines',
                     'Paie' => 'Paie',
+                    'Validation des Acquis' => 'Validation des Acquis',
                     'Comptabilité' => 'Comptabilité',
                     'Malette du Dirigeant' => 'Malette du Dirigeant',
                     'Fiscalité' => 'Fiscalité',
                     'Bureautique' => 'Bureautique',
-                    'TECHNIQUE DE RECHERCHE EMPLOI' =>
+                    'Technique de recherche emploi' =>
                         'TECHNIQUE DE RECHERCHE EMPLOI',
                     'EBP' => 'EBP',
                 ],

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit FormationScp{% endblock %}
+
+{% block body %}
+    <h1>Edit FormationScp</h1>
+
+    {{ include('formation_scp/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('formation_scp_index') }}">back to list</a>
+
+    {{ include('formation_scp/_delete_form.html.twig') }}
+{% endblock %}

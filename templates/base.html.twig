@@ -1,152 +1,196 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" type="image/png" href="{{ asset('img/icon.PNG') }} " />
-    <title>
-      {% block title %}
-        SCP Formation
-      {% endblock %}
-    </title>
-    {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-    {% block stylesheets %}
-      {# {{ encore_entry_link_tags('app') }} #}
-      <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous" />
-      <link rel="stylesheet"
-        href="https://bootswatch.com/4/lux/bootstrap.min.css" />
-      <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-      <link rel="stylesheet"
-        href="//use.fontawesome.com/releases/v5.0.7/css/all.css" />
-	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    {% endblock %}
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<link rel="icon" type="image/png" href="{{ asset('img/icon.PNG') }} "/>
+		<title>
+			{% block title %}
+				SCP Formation
+			{% endblock %}
+		</title>
+		{# Run `composer require symfony/webpack-encore-bundle`
+		           and uncomment the following Encore helpers to start using Symfony UX #}
+		{% block stylesheets %}
+			{# {{ encore_entry_link_tags('app') }} #}
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+			<link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css"/>
+			<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+			<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+			<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		{% endblock %}
 
-    {% block javascripts %}
-      {# {{ encore_entry_script_tags('app') }} #}
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/22bcdb4e71.js"
-        crossorigin="anonymous"></script>
-    {% endblock %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
-<a href="{{ path('home') }}"><img src="{{ asset('img/logo.PNG') }}" id="logo" /></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse"    data-target="#navbarColor01"    aria-controls="navbarColor01"  aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-<div class="collapse navbar-collapse ml-5" id="navbarColor01">
-<ul class="navbar-nav mr-auto">
-   <li class="nav-item active ml-3">
-      <a class="nav-link" href="{{ path('home') }}">   Accueil  <span class="sr-only">(current)</span></a>
-   </li>
-   <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">          Formation        </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="{{ path('formation') }}">Voir plus</a>
-	  <hr class="my-1">
-      <a class="dropdown-item" href="{{ path('formation_new') }}">S'inscrire</a>
-   </li>
-   <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">          Soutien        </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         <a class="dropdown-item" href="{{ path('soutien_index') }}">Voir plus</a>
-		 <hr class="my-1">
-         <a class="dropdown-item" href="{{ path('soutien_new') }}">S'inscrire</a>
-   </li>
-</ul>
-{# <ul>
-					           
-					<li class="nav-item"><a class="btn btn-outline-danger" href="{{ path('app_login') }}">Se connecter</a></li>
-					          {% if app.user %}            
-					<a href="{{ path('app_logout') }}" class="btn btn-danger">              Se déconnecter            </a>
-					          {% else %}            
-					<a class="btn btn-outline-success" href="{{ path('app_login') }}">              Se connecter            </a>
-					          {% endif %}          {% if is_granted('ROLE_ADMIN') %}            
-					<a class="m-3" href="{{ path('admin_home') }}"><img src="https://img.icons8.com/material-rounded/24/4a90e2/admin-settings-male.png" id="logoa" /></a>
-					          {% endif %}        
-				</ul> #}
+		{% block javascripts %}
+			{# {{ encore_entry_script_tags('app') }} #}
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+			<script src="https://kit.fontawesome.com/02363f4e09.js" crossorigin="anonymous"></script>
+		{% endblock %}
+		<div class="container-fluid" id="haut_page">
+			<div class="row">
+				<div class="col-sm-4">
+					<i class="fa-solid fa-phone">0262 56 89 78</i>
+				</div>
+				<div class="col-sm-4">
+					<i class="fa-solid fa-envelope">scprint.run@gmail.com</i>
+				</div>	
+			</div>
+		</div>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+			<a href="{{ path('home') }}"><img src="{{ asset('img/logo.PNG') }}" id="logo"/></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse ml-5" id="navbarColor01">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active ml-3">
+						<a class="nav-link" href="{{ path('home') }}">
+							Accueil
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item active ml-3">
+						<a class="nav-link" href="{{ path('formation_scp_index') }}">
+							Nos Formations
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item active ml-3">
+						<a class="nav-link" href="{{ path('a_propos') }}">
+							Qui sommes-nous ?
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item active ml-3">
+						<a class="nav-link" href="{{ path('formation_new') }}">
+							Inscription
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					{# <li class="nav-item dropdown">
+					      <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">          Formation        </a>
+					      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					      <a class="dropdown-item" href="{{ path('formation_scp_index') }}">Voir plus</a>
+						  <hr class="my-1">
+					      <a class="dropdown-item" href="{{ path('formation_new') }}">S'inscrire</a>
+					   </li> #}
+					{# <li class="nav-item dropdown">
+					      <a class="nav-link dropdown-toggle" href="{{ path('formation') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">          Soutien        </a>
+					      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					         <a class="dropdown-item" href="{{ path('soutien_index') }}">Voir plus</a>
+							 <hr class="my-1">
+					         <a class="dropdown-item" href="{{ path('soutien_new') }}">S'inscrire</a>
+					   </li> #}
+				</ul>
+				<ul class="nav justify-content-center">
+					<li class="nav-item">
+						<a href="" target="_blank"><img src="{{ asset('img/qualiopi.PNG') }}" id="logo"/></a>
+					</li>
+				</ul>
+				{# <ul>
+									           
+									<li class="nav-item"><a class="btn btn-outline-danger" href="{{ path('app_login') }}">Se connecter</a></li>
+									          {% if app.user %}            
+									<a href="{{ path('app_logout') }}" class="btn btn-danger">              Se déconnecter            </a>
+									          {% else %}            
+									<a class="btn btn-outline-success" href="{{ path('app_login') }}">              Se connecter            </a>
+									          {% endif %}          {% if is_granted('ROLE_ADMIN') %}            
+									<a class="m-3" href="{{ path('admin_home') }}"><img src="https://img.icons8.com/material-rounded/24/4a90e2/admin-settings-male.png" id="logoa" /></a>
+									          {% endif %}        
+								</ul> #}
 			</div>
 		</nav>
 	</head>
 	<body>
-    {% block body %}
+		{% block body %}{% endblock %}
+	</body>
+	<!-- Footer -->
+	<footer
+		class="text-center text-white bg bg-primary" id="footer">
+		<!-- Grid container -->
+		<div
+			class="container p-4 bg bg-primary">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<h5 id="titre_bas_page">
+					Rejoignez-nous
+				</h5>
+				<!-- Facebook -->
+				<a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/scprint974" role="button" target="_blank">
+					<i class="fab fa-facebook-f"></i>
+				</a>
 
-    {% endblock %}
- </body>
-<!-- Footer -->
-<footer class="text-center text-white bg bg-primary" id="footer"><!-- Grid container -->
-<div class="container p-4 bg bg-primary" >
-	<!-- Section: Social media -->
-	<section class="mb-4">
-		<h5 id="titre_bas_page">
-			          Rejoignez-nous     
-		</h5>
-		<!-- Facebook -->
-		<a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/scprint974" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
-		
-	</section>
-	<!-- Section: Social media -->
-	<!-- Section: Form -->
-	<!-- Section: Text -->
-	<section class="mb-4">
-		<p>
-			          SCP fondé en mars 2019 propose des formations en Comptabilité,          Fiscalité, RH & Gestion de Paie, Technique de recherches d'emploi,          Environnement internet, Bureautique et Création graphique. Ainsi que          du soutien scolaire. 
-			<br />
-			<br />
-			          Idéalement situé à Saint Leu à proximité de la Route des Tamarins, notre          centre offre un cadre calme dédié au travail.        
-		</p>
-	</section>
-	<!-- Section: Text -->
-	<!-- Section: Links -->
-	<section class="">
-		<!-- Grid row -->
-		<div class="row">
-			<!-- Grid column -->
-			<div class="col-lg-6 col-md-7 mb-4 mb-md-0" id="col_bas_page">
-				<h5 class="text-uppercase bg bg-primary mb-3" id ="titre_bas_page">
-					              Infos             
-				</h5>
-				<a id="link_bas_page"> 121 rue du musée Piton Saint-leu , 97424 </a>
-				<br />
-				<a id="link_bas_page">  scprint.run@gmail.com</a>
-				<br>
-				<a id="link_bas_page">  06 92 68 03 73</a>
-			</div>
-			<div class="col-lg-6 col-md-7 mb-4 mb-md-0" id="col_bas_page" >
-				<h5 class="text-uppercase mb-3" id ="titre_bas_page">
-					              MENU             
-				</h5>
-				<a href="{{ path('home') }}" id="link_bas_page">Accueil</a>
-				<br>
-				<a href="{{ asset('pdf/CGU.pdf') }}" id="link_bas_page" target="_blank">Conditions générales d'utilisation</a>
-        <br>
-				<a href="{{ asset('pdf/politique.pdf') }}" id="link_bas_page" target="_blank">Politique de confidentialité</a>
-        <br>
-				{# <a href="#entete" id="link_bas_page">Haut de page</a> #}
-			</div>
-			<!-- Grid column -->
+			</section>
+			<!-- Section: Social media -->
+			<!-- Section: Form -->
+			<!-- Section: Text -->
+				<section class="mb-4"> <p>
+					SCP fondé en mars 2019 propose des formations en Comptabilité,          Fiscalité, RH & Gestion de Paie, Technique de recherches d'emploi,          Environnement internet, Bureautique et Création graphique. Ainsi que          du soutien scolaire.
+					<br/>
+					<br/>
+					Idéalement situé à Saint Leu à proximité de la Route des Tamarins, notre          centre offre un cadre calme dédié au travail.
+				</p>
+			</section>
+			<!-- Section: Text -->
+			<!-- Section: Links -->
+			<section
+				class="">
+				<!-- Grid row -->
+				<div
+					class="row">
+					<!-- Grid column -->
+					<div class="col-lg-4 col-md-7 mb-2 mb-md-0" id="col_bas_page">
+						<h5 class="text-uppercase bg bg-primary mb-3" id="titre_bas_page">
+							Infos
+						</h5>
+						<a id="link_bas_page">
+							121 rue du musée Piton Saint-leu , 97424
+						</a>
+						<br/>
+						<a id="link_bas_page">
+							scprint.run@gmail.com</a>
+						<br>
+						<a id="link_bas_page">
+							06 92 68 03 73</a>
+					</div>
+					<div class="col-lg-4 col-md-7 mb-2 mb-md-0" id="col_bas_page">
+						<h5 class="text-uppercase mb-3" id="titre_bas_page">
+							Liens utiles
+						</h5>
+						<a href="{{ asset('pdf/CGU.pdf') }}" id="link_bas_page" target="_blank">Conditions générales d'utilisation</a>
+						<br>
+						<a href="{{ asset('pdf/politique.pdf') }}" id="link_bas_page" target="_blank">Politique de confidentialité</a>
+						<br>
+						{# <a href="#entete" id="link_bas_page">Haut de page</a> #}
+					</div>
+					<div class="col-lg-4 col-md-7 mb-2 mb-md-0" id="col_bas_page">
+						<h5 class="text-uppercase mb-3" id="titre_bas_page">
+							Pages
+						</h5>
+						<a href="{{ path('home') }}" id="link_bas_page">Accueil</a>
+						<br>
+						<a href="{{ path('formation_scp_index') }}" id="link_bas_page" target="_blank">Nos formations</a>
+						<br>
+						<a href="{{ path('formation_new') }}" id="link_bas_page" target="_blank">S'inscrire à une formation</a>
+						<br>
+						{# <a href="#entete" id="link_bas_page">Haut de page</a> #}
+					</div>
+					<!-- Grid column -->
+				</div>
+				<!-- Grid row -->
+			</section>
+			<!-- Section: Links -->
 		</div>
-		<!-- Grid row -->
-	</section>
-	<!-- Section: Links -->
-</div>
-<!-- Grid container -->
-<!-- Copyright -->
-<div class="text-center p-4" id="footer-bottom">
-	      © 2021 Copyright:      
-	<a class="text-white" href="https://scpformation.re" target="_blank">scpformation.re</a>
-</div>
-<!-- Copyright -->
-</footer>
-<!-- Footer -->
+		<!-- Grid container -->
+		<!-- Copyright -->
+		<div class="text-center p-4" id="footer-bottom">
+			© 2021 Copyright:
+			<a class="text-white" href="https://scpformation.re" target="_blank">scpformation.re</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+	<!-- Footer -->
 </html>
-
